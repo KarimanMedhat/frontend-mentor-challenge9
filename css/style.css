@@ -1,0 +1,171 @@
+/* primary rules */
+:root {
+    --VeryDark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    --DarkGrayish-Magenta: hsl(303, 10%, 53%);
+    --LightGrayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+* {
+    margin: 0;
+}
+body {
+    background-image: url(../images/bg-pattern-top-desktop.svg) , url(../images/bg-pattern-bottom-desktop.svg);
+    background-position-x: -200px, 230px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container {
+    font-family: 'League Spartan', sans-serif;
+    position: relative;
+}
+/* primary rules */
+
+/* start header */
+.header {
+    width: 300px;
+    position: absolute;
+    transform: translate(-170%, -100%);
+}
+.heading {
+    color: var(--VeryDark-Magenta);
+    font-size: 47px;
+    font-weight: 700;
+}
+.header-text {
+    margin-top: 15px;
+    width: 400px;
+    color: var(--DarkGrayish-Magenta);
+}
+/* end header */
+
+/* start rate-section */
+.rate-section {
+    position: absolute;
+    transform: translate(-530px, -40px);
+}
+.rate-holder {
+    display: flex;
+    padding: 15px;
+    background-color: var(--LightGrayish-Magenta);
+    width: 335px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+.rate-one {
+    position: absolute;
+    transform: translate(160%, -340%);
+}
+.rate-two {
+    position: absolute;
+    transform: translate(170%, -225%);
+}
+.rate-three {
+    position: absolute;
+    transform: translate(180%, -110%);
+}
+.rate-holder img {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}   
+.rate-text {
+    margin-left: 25px;
+    color: var(--VeryDark-Magenta);
+    font-weight: 700;
+}
+/* end rate-section */
+
+/* start review */
+.review-section {
+    display: flex;
+    position: absolute;
+    transform: translate(-270px, -65px);
+}
+.profile {
+    background-color: var(--VeryDark-Magenta);
+    width: 260px;
+    margin-left: 30px;
+    border-radius: 10px;
+    padding: 30px;
+}
+.profile img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+.info {
+    display: inline-block;
+    margin-left: 20px;
+}
+.info h2 {
+    font-size: 15px;
+    color: var(--White);
+}
+.info .title {
+    font-size: 15px;
+    color: var(--Soft-Pink);
+}
+.card-text {
+    color: var(--White);
+    font-weight: 100;
+}
+.card-one {
+    position: absolute;
+    transform: translate(-275px, 95px);
+}
+.card-two {
+    position: absolute;
+    transform: translate(70px, 110px);
+}
+.card-three {
+    position: absolute;
+    transform: translate(415px, 120px);
+}
+/* end review */
+
+@media (max-width: 390px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 400px;
+        grid-template-rows: 300px 300px 450px 750px;
+    }
+    .heading {
+        display: grid;
+        grid-row: 1 / 2;
+    }
+    .header-text {
+        display: grid;
+        grid-row: 2 / 3;
+    }
+    .rate-section {
+        display: grid;
+        grid-row: 3 / 4;
+    }
+    .rate-holder {
+        margin-bottom: 15px;
+    }
+    .rate-holder img {
+        width: 15px;
+        height: 15px;
+        margin-right: 5px;
+    }   
+    .rate-text {
+        color: var(--VeryDark-Magenta);
+        font-weight: 700;
+        display: block;
+    }
+    .review-section {
+        display: grid;
+        grid-row: 4 / 5;
+    } 
+}
